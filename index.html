@@ -1,21 +1,34 @@
 <!doctype html>
-
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-
-  <title>CSC 313: The Programming Process</title>
-  <meta name="description" content="Programming Process">
-  <meta name="Josiah Pang" content="SitePoint">
-
-  <link rel="stylesheet" href="css/styles.css?v=1.0">
-
-</head>
-
-<body>
-  <script src="js/scripts.js"></script>
-  <h1>CSC 313: The Programming Process</h1>
-  <h2>Josiah Pang</h2>
-  <p>Placeholder for stuff later</p>
-</body>
+  <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.3.1/css/ol.css" type="text/css">
+    <style>
+      .map {
+        height: 400px;
+        width: 100%;
+      }
+    </style>
+    <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.3.1/build/ol.js"></script>
+    <title>CSC 313: The Programming Process</title>
+  </head>
+  <body>
+    <h1>CSC 313: The Programming Process</h1>
+    <h2>Josiah Pang</h2>
+    <h2>My Map</h2>
+    <div id="map" class="map"></div>
+    <script type="text/javascript">
+      var map = new ol.Map({
+        target: 'map',
+        layers: [
+          new ol.layer.Tile({
+            source: new ol.source.OSM()
+          })
+        ],
+        view: new ol.View({
+          center: ol.proj.fromLonLat([37.41, 8.82]),
+          zoom: 4
+        })
+      });
+    </script>
+  </body>
 </html>
