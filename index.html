@@ -16,19 +16,6 @@
     <h2>Josiah Pang</h2>
     <h2>My Map</h2>
     <div id="map" class="map"></div>
-    <script type="text/javascript">
-      var map = new ol.Map({
-        target: 'map',
-        layers: [
-          new ol.layer.Tile({
-            source: new ol.source.OSM()
-          })
-        ],
-        view: new ol.View({
-          center: ol.proj.fromLonLat([-120.660310, 35.300521]),
-          zoom: 4
-        })
-      });
-    </script>
+    <script type="text/javascript" src="logic.js"></script>
   </body>
 </html>
